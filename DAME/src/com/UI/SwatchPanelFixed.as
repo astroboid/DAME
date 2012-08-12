@@ -23,6 +23,7 @@ import mx.collections.IList;
 import mx.controls.ColorPicker;
 import mx.controls.TextInput;
 import mx.core.FlexVersion;
+import mx.core.IFlexDisplayObject;
 import mx.core.UIComponent;
 import mx.core.mx_internal;
 import mx.events.ColorPickerEvent;
@@ -1347,6 +1348,13 @@ public class SwatchPanelFixed extends UIComponent implements IFocusManagerContai
 		selectedColor = Number(color);
         
 		dispatchEvent(new Event("change"));   
+    }
+
+    public function get defaultButton():IFlexDisplayObject {
+        return null;
+    }
+
+    public function set defaultButton(value:IFlexDisplayObject):void {
     }
 }
 
